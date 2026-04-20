@@ -64,7 +64,7 @@ lib/
 │   ├── onboarding/        # User onboarding
 │   └── splash/            # Splash screen
 └── main.dart              # App entry point
-
+```
 
 ## 🚀 Getting Started
 
@@ -159,6 +159,7 @@ Grocery_Price_Scanner/
 │   └── app.pdf
 ├── pubspec.yaml
 └── README.md
+```
 
 ## 🤝 Contributing
 
