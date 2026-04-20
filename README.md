@@ -118,7 +118,7 @@ scan_history - User scan records
 
 tracked_products - User saved products
 
-🔄 CI/CD Pipeline
+## 🔄 CI/CD Pipeline
 The project uses GitHub Actions for:
 
 ✅ Automated testing
@@ -131,8 +131,9 @@ The project uses GitHub Actions for:
 
 ✅ Optional Firebase Distribution deployment
 
-📁 Project Structure
-text
+## 📁 Project Structure
+```text
+
 Grocery_Price_Scanner/
 ├── lib/
 │   ├── core/
@@ -158,35 +159,33 @@ Grocery_Price_Scanner/
 │   └── app.pdf
 ├── pubspec.yaml
 └── README.md
-🤝 Contributing
-Fork the repository
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+## 🤝 Contributing
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Push to the branch (git push origin feature/AmazingFeature)
+1. **Fork the repository**
+   - Click the Fork button on the top right of the repository page
 
-Open a Pull Request
+2. **Create your feature branch**
+   ```bash
+   git checkout -b feature/AmazingFeature
 
-📄 Demo
-You can find the app demo PDF at demo/app.pdf
+## 👩‍💻 Author
 
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+**Romaissa Tala**
 
-👩‍💻 Author
-Romaissa Tala
+- GitHub: [@romaissaTala](https://github.com/romaissaTala)
+- Project Link: [https://github.com/romaissaTala/Grocery_Price_Scanner](https://github.com/romaissaTala/Grocery_Price_Scanner)
 
-GitHub: @romaissaTala
+## 🙏 Acknowledgments
 
-Project Link: https://github.com/romaissaTala/Grocery_Price_Scanner
+- [Open Food Facts](https://openfoodfacts.org/) - For providing product data API
+- [Flutter Community](https://flutter.dev/community) - For amazing packages and support
+- [Supabase](https://supabase.com/) - For excellent backend services
 
-🙏 Acknowledgments
-Open Food Facts API for product data
+---
 
-Flutter community for amazing packages
-
-Supabase for excellent backend services
-
-<div align="center"> Made with ❤️ by Romaissa Tala </div>
+<div align="center">
+  Made with ❤️ by <strong>Romaissa Tala</strong>
+</div>
