@@ -44,16 +44,26 @@
 ## 🏗️ Architecture
 
 The project follows **Clean Architecture** with a **Feature-First** structure:
+
+```text
 lib/
-├── core/ # Core utilities, themes, constants
-├── features/ # Feature modules
-│ ├── product/ # Product search & display
-│ ├── scanner/ # Barcode scanning
-│ ├── history/ # Scan history
-│ ├── stores/ # Store management
-│ ├── onboarding/ # User onboarding
-│ └── splash/ # Splash screen
-└── main.dart # App entry point
+├── core/                    # Core utilities, themes, constants
+│   ├── constants/          # App constants and strings
+│   ├── di/                 # Dependency injection
+│   ├── errors/             # Error handling
+│   ├── network/            # Network connectivity
+│   ├── router/             # Navigation routing
+│   ├── themes/             # Dark/Light themes
+│   ├── utils/              # Utility functions
+│   └── widgets/            # Reusable widgets
+├── features/               # Feature modules
+│   ├── product/           # Product search & display
+│   ├── scanner/           # Barcode scanning
+│   ├── history/           # Scan history
+│   ├── stores/            # Store management
+│   ├── onboarding/        # User onboarding
+│   └── splash/            # Splash screen
+└── main.dart              # App entry point
 
 
 ## 🚀 Getting Started
