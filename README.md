@@ -7,14 +7,15 @@
 
 > Scan barcodes, compare prices, and save money on your grocery shopping!
 
-## 📱 Screenshots
+## 📄 Demo
 
 <div align="center">
-  <img src="demo/screenshots/scanner.jpg" width="200" alt="Scanner"/>
-  <img src="demo/screenshots/product.jpg" width="200" alt="Product Details"/>
-  <img src="demo/screenshots/history.jpg" width="200" alt="Scan History"/>
-  <img src="demo/screenshots/stores.jpg" width="200" alt="Stores"/>
+  <a href="demo/app.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/📄_View_App_Demo-Open_PDF-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="View Demo PDF">
+  </a>
 </div>
+
+> Click the button above to view the complete app demonstration PDF.
 
 ## ✨ Features
 
