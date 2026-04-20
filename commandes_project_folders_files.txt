@@ -1,0 +1,96 @@
+# =============================================
+# GROCERY PRICE SCANNER — Create file structure
+# Run from: D:\Grocery Price Scanner\
+# =============================================
+
+# CORE
+New-Item -ItemType Directory -Force -Path "lib\core\constants","lib\core\di","lib\core\router","lib\core\themes","lib\core\utils","lib\core\widgets","lib\core\errors","lib\core\network"
+New-Item -ItemType File -Force -Path "lib\core\constants\app_colors.dart","lib\core\constants\app_strings.dart","lib\core\constants\app_constants.dart"
+New-Item -ItemType File -Force -Path "lib\core\di\injection_container.dart","lib\core\di\injection_container.config.dart"
+New-Item -ItemType File -Force -Path "lib\core\router\app_router.dart"
+New-Item -ItemType File -Force -Path "lib\core\themes\app_theme.dart","lib\core\themes\app_text_styles.dart"
+New-Item -ItemType File -Force -Path "lib\core\errors\failures.dart","lib\core\errors\exceptions.dart"
+New-Item -ItemType File -Force -Path "lib\core\utils\price_formatter.dart","lib\core\utils\barcode_validator.dart"
+New-Item -ItemType File -Force -Path "lib\core\widgets\loading_overlay.dart","lib\core\widgets\shimmer_box.dart","lib\core\widgets\error_widget.dart","lib\core\widgets\app_bottom_nav.dart"
+
+# FEATURE: SPLASH
+$base = "lib\features\splash"
+New-Item -ItemType Directory -Force -Path "$base\presentation\bloc","$base\presentation\pages"
+New-Item -ItemType File -Force -Path "$base\presentation\bloc\splash_bloc.dart","$base\presentation\bloc\splash_event.dart","$base\presentation\bloc\splash_state.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\pages\splash_page.dart"
+
+# FEATURE: ONBOARDING
+$base = "lib\features\onboarding"
+New-Item -ItemType Directory -Force -Path "$base\presentation\bloc","$base\presentation\pages","$base\presentation\widgets"
+New-Item -ItemType File -Force -Path "$base\presentation\bloc\onboarding_bloc.dart","$base\presentation\bloc\onboarding_event.dart","$base\presentation\bloc\onboarding_state.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\pages\onboarding_page.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\widgets\onboarding_slide.dart"
+
+# FEATURE: SCANNER
+$base = "lib\features\scanner"
+New-Item -ItemType Directory -Force -Path "$base\data\datasources","$base\data\models","$base\data\repositories"
+New-Item -ItemType Directory -Force -Path "$base\domain\entities","$base\domain\repositories","$base\domain\usecases"
+New-Item -ItemType Directory -Force -Path "$base\presentation\bloc","$base\presentation\pages","$base\presentation\widgets"
+New-Item -ItemType File -Force -Path "$base\data\datasources\scanner_local_datasource.dart"
+New-Item -ItemType File -Force -Path "$base\data\models\scan_history_model.dart"
+New-Item -ItemType File -Force -Path "$base\data\repositories\scanner_repository_impl.dart"
+New-Item -ItemType File -Force -Path "$base\domain\entities\scan_result.dart"
+New-Item -ItemType File -Force -Path "$base\domain\repositories\scanner_repository.dart"
+New-Item -ItemType File -Force -Path "$base\domain\usecases\save_scan_to_history.dart","$base\domain\usecases\get_scan_history.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\bloc\scanner_bloc.dart","$base\presentation\bloc\scanner_event.dart","$base\presentation\bloc\scanner_state.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\pages\scanner_page.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\widgets\scan_overlay.dart","$base\presentation\widgets\scan_result_sheet.dart"
+
+# FEATURE: PRODUCT
+$base = "lib\features\product"
+New-Item -ItemType Directory -Force -Path "$base\data\datasources","$base\data\models","$base\data\repositories"
+New-Item -ItemType Directory -Force -Path "$base\domain\entities","$base\domain\repositories","$base\domain\usecases"
+New-Item -ItemType Directory -Force -Path "$base\presentation\bloc","$base\presentation\pages","$base\presentation\widgets"
+New-Item -ItemType File -Force -Path "$base\data\datasources\product_remote_datasource.dart","$base\data\datasources\product_local_datasource.dart"
+New-Item -ItemType File -Force -Path "$base\data\models\product_model.dart","$base\data\models\store_model.dart","$base\data\models\price_model.dart"
+New-Item -ItemType File -Force -Path "$base\data\repositories\product_repository_impl.dart"
+New-Item -ItemType File -Force -Path "$base\domain\entities\product.dart","$base\domain\entities\store.dart","$base\domain\entities\price.dart","$base\domain\entities\product_with_prices.dart"
+New-Item -ItemType File -Force -Path "$base\domain\repositories\product_repository.dart"
+New-Item -ItemType File -Force -Path "$base\domain\usecases\get_product_by_barcode.dart","$base\domain\usecases\get_prices_for_product.dart","$base\domain\usecases\track_product.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\bloc\product_bloc.dart","$base\presentation\bloc\product_event.dart","$base\presentation\bloc\product_state.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\pages\product_result_page.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\widgets\product_header_card.dart","$base\presentation\widgets\price_comparison_list.dart","$base\presentation\widgets\nutrition_card.dart","$base\presentation\widgets\flip_card.dart","$base\presentation\widgets\price_history_chart.dart","$base\presentation\widgets\shimmer_price_list.dart"
+
+# FEATURE: HISTORY
+$base = "lib\features\history"
+New-Item -ItemType Directory -Force -Path "$base\data\datasources","$base\data\models","$base\data\repositories"
+New-Item -ItemType Directory -Force -Path "$base\domain\entities","$base\domain\repositories","$base\domain\usecases"
+New-Item -ItemType Directory -Force -Path "$base\presentation\bloc","$base\presentation\pages","$base\presentation\widgets"
+New-Item -ItemType File -Force -Path "$base\data\datasources\history_remote_datasource.dart"
+New-Item -ItemType File -Force -Path "$base\data\models\scan_history_model.dart"
+New-Item -ItemType File -Force -Path "$base\data\repositories\history_repository_impl.dart"
+New-Item -ItemType File -Force -Path "$base\domain\entities\scan_history_entry.dart"
+New-Item -ItemType File -Force -Path "$base\domain\repositories\history_repository.dart"
+New-Item -ItemType File -Force -Path "$base\domain\usecases\get_history.dart","$base\domain\usecases\delete_history_entry.dart","$base\domain\usecases\search_history.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\bloc\history_bloc.dart","$base\presentation\bloc\history_event.dart","$base\presentation\bloc\history_state.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\pages\history_page.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\widgets\history_list_tile.dart","$base\presentation\widgets\history_search_bar.dart"
+
+# FEATURE: STORES
+$base = "lib\features\stores"
+New-Item -ItemType Directory -Force -Path "$base\data\datasources","$base\data\models","$base\data\repositories"
+New-Item -ItemType Directory -Force -Path "$base\domain\entities","$base\domain\repositories","$base\domain\usecases"
+New-Item -ItemType Directory -Force -Path "$base\presentation\bloc","$base\presentation\pages","$base\presentation\widgets"
+New-Item -ItemType File -Force -Path "$base\data\datasources\store_remote_datasource.dart"
+New-Item -ItemType File -Force -Path "$base\data\models\store_model.dart"
+New-Item -ItemType File -Force -Path "$base\data\repositories\store_repository_impl.dart"
+New-Item -ItemType File -Force -Path "$base\domain\entities\store.dart"
+New-Item -ItemType File -Force -Path "$base\domain\repositories\store_repository.dart"
+New-Item -ItemType File -Force -Path "$base\domain\usecases\get_stores.dart","$base\domain\usecases\update_price.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\bloc\store_bloc.dart","$base\presentation\bloc\store_event.dart","$base\presentation\bloc\store_state.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\pages\stores_page.dart"
+New-Item -ItemType File -Force -Path "$base\presentation\widgets\store_card.dart"
+
+# Supabase folder
+New-Item -ItemType Directory -Force -Path "supabase"
+New-Item -ItemType File -Force -Path "supabase\01_schema.sql","supabase\02_rls.sql","supabase\03_seed_data.sql"
+
+# Root files
+New-Item -ItemType File -Force "lib\app.dart","lib\main.dart"
+
+Write-Host "All files created successfully!" -ForegroundColor Green
